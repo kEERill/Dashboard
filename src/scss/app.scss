@@ -1,1 +1,20 @@
-@import 'components/_panel.scss';
+@font-face {
+    font-family: 'Akrobat';
+    font-weight: 300;
+    src: url("../fonts/Akrobat-Light.otf");
+}
+@font-face {
+    font-family: 'Akrobat';
+    font-weight: 400;
+    src: url("../fonts/Akrobat-Regular.otf");
+}
+@font-face {
+    font-family: 'Akrobat';
+    font-weight: 700;
+    src: url("../fonts/Akrobat-Bold.otf");
+}
+
+@import 'components/_variables.scss';
+
+@import 'components/_base.scss';
+@import 'components/_card.scss';
