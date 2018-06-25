@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,KAAK,AAAC,CACF,UAAU,CAAE,IAAI,CACnB",
+    "sources": [
+        "../scss/app.scss",
+        "../scss/components/_panel.scss"
+    ],
+    "names": [],
+    "file": "app.min.css"
+}
