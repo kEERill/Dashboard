@@ -4,3 +4,15 @@
         -ms-border-radius: $radius;
             border-radius: $radius;
 }
+
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+           display: flex;
+}
+
+@mixin align-items($align) {
+    -webkit-box-align: $align;
+       -ms-flex-align: $align;
+          align-items: $align;
+}
