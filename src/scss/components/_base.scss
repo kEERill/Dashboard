@@ -1,4 +1,7 @@
 body {
     font-family: $font-family;
-    line-height: 1.2;
+    font-size: 14px;
+}
+.small, small {
+    font-size: 12px;
 }
