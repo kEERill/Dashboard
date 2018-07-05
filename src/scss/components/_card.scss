@@ -1,0 +1,127 @@
+%card-header--flex {
+    @include display-flex();
+    @include align-items(center); 
+}
+
+%card-remove-margin {
+    margin-bottom: 30px;
+}
+
+// Карточка
+.card {
+    border: 0;
+    @include border-radius(0);
+
+    box-shadow: $box-shadow-card;
+
+    @extend %card-remove-margin;
+
+    // Заголовок карточки
+    .card-header {
+        @include display-flex();
+        @include align-items(stretch);
+
+        @include border-radius(0);
+    
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    
+        background: transparent;
+        padding: 0 25px;
+        height: 60px;
+    
+        // Заголовок карточки
+        &--title {
+            @extend %card-header--flex;
+            margin: 0;
+
+            // Иконка карточки
+            &-icon {
+                padding-right: 10px;
+            }
+
+            // Надпись карточки
+            &-text {
+                margin: 0;
+                font-size: 20px;
+                line-height: 1;
+
+                // Описание карточка
+                > span {
+                    font-size: 13px;
+                    padding-left: 3px;
+                }
+            }
+        }
+
+        // Кнопки с инструментами карточки
+        &--tools {
+            @extend %card-header--flex;
+            -ms-flex-line-pack: end;
+            align-content: flex-end; 
+
+            // Навигация с кнопками инструментами
+            > ul {
+                @extend %card-header--flex;
+                padding: 0;
+                margin: 0;
+
+                // Элемент навигации
+                > li {
+                    list-style: none;
+                    padding: 0 5px;
+                }
+
+                > li:first-child() {
+                    padding-left: 0;
+                }
+
+                > li:last-child() {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .card-body {
+        padding: 20px 25px;
+    }
+
+    // Закругленные углы карточек
+    &.card-rounded {
+        @include border-radius(5px);
+
+        // Сглаживаем углы шапки если это карточка с закругленными углами
+        .card-header {
+            @include border-radius(5px 5px 0 0);
+        }
+    }
+
+    // Убирает нижную границу
+    &.card-remove-borders {
+        .card-header {
+            border-bottom: 0;
+        }
+        .card-body {
+            padding-top: 5px;
+        }
+        .card-footer {
+            border-top: 0;
+        } 
+    }
+
+    // Стандартная карточка
+    &.card-default {
+        background-color: #fff;
+    }
+}
+.card-group {
+    box-shadow: $box-shadow-card;
+
+    @extend %card-remove-margin;
+    .card {
+        box-shadow: none;
+        margin: 0;
+    }
+}
