@@ -1,5 +1,57 @@
-.form-control{
-    border-radius: 10% !important;
-    border-color: $purple;
+//Группа формы
+.form-group{
+
+    label{
+        
+    }
+    //Стандартная форма
+    .form-control{
+        transition: linear .15s; 
+        background: transparent;
+        @include border-radius(0);
+        border-color: $gray-light;
+
+        &::-webkit-input-placeholder {
+            color: $gray;
+        } 
+        &::-moz-placeholder {
+            color: $gray;
+		}
+
+        //Форма с закругленными углами
+        &--border-5{
+            @include border-radius(5px);
+        }
+
+        //Форма с круглыми сторонами
+        &--border-30{
+            @include border-radius(30px);
+		}
+		
+		//Фокус стандарт
+		&:focus{
+            box-shadow: none;
+            background: $gray-light;
+		}
+		
+		//Фокус фиолетовый
+		&--focus-purple:focus{
+			border-color: $purple;
+			background: none;
+		
+		}
+
+		//Фокус красный
+		&--focus-red:focus{
+			border-color: $red;
+			background: none;
+		}
+
+	}
+	//описание формы
+	.form-text{
+		color: $gray;
+	}
+
 
 }
