@@ -2,10 +2,10 @@
 .form-group{
 
     label{
-        
+        margin-bottom: 2px;
     }
     //Стандартная форма
-    .form-control{
+    .form-control {
         transition: linear .15s; 
         background: transparent;
         @include border-radius(0);
@@ -19,39 +19,45 @@
 		}
 
         //Форма с закругленными углами
-        &--border-5{
+        &-rounded{
             @include border-radius(5px);
         }
 
         //Форма с круглыми сторонами
-        &--border-30{
+        &-circle{
             @include border-radius(30px);
+            padding-left: 20px;
 		}
 		
 		//Фокус стандарт
 		&:focus{
             box-shadow: none;
             background: $gray-light;
-		}
-		
-		//Фокус фиолетовый
-		&--focus-purple:focus{
-			border-color: $purple;
-			background: none;
-		
-		}
+        }
+        
+        &-outline {
+            &:focus {
+                background: none; 
+            }
 
-		//Фокус красный
-		&--focus-red:focus{
-			border-color: $red;
-			background: none;
-		}
+            //Фокус фиолетовый
+            &-purple:focus{
+                border-color: $purple;
+            }
 
-	}
+            //Фокус красный
+            &-danger:focus{
+                border-color: $red;
+            }
+        }
+    }
+    
 	//описание формы
 	.form-text{
 		color: $gray;
-	}
-
-
+    }
+    
+    .form-text-above {
+        margin: 0 0 4px 0;
+    }
 }
